@@ -1,0 +1,25 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EFCO_Practicas2_DisenoAmps_lib:Bilateral_Amp:schematic"
+aele StabFact1=stab_fact(S);
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=yes SortNoise=0 BandwidthForNoise=1.0 Hz Freq=6 GHz DevOpPtLevel=0 \
+OutputPlan="SP1_Output" 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:Term2  N__0 0 Num=2 Z=50 Ohm Noise=yes 
+Port:Term1  N__2 0 Num=1 Z=50 Ohm Noise=yes 
+#uselib "ckt" , "S2P"
+S2P:SNP2  N__7 N__4 0 Lib="sp_hp" File="sp_hp_ATF-13100_19921201" Temp=27.0 
+aele StabMeas1=stab_meas(S);
+TLIN:TL2  N__2 N__9 Z=50.0 Ohm E=100 F=6 GHz 
+TLIN:TL1  N__8 N__2 Z=50.0 Ohm E=100 F=6 GHz 
+TLIN:TL4  N__10 N__0 Z=50.0 Ohm E=100 F=6 GHz 
+TLIN:TL3  N__0 N__4 Z=50.0 Ohm E=100 F=6 GHz 
+R:R1  N__9 N__7 R=(50*0.3) Ohm Noise=yes 

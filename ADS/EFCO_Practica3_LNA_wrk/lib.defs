@@ -1,0 +1,5 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+DEFINE FETmodelss_lib FETmodelss_lib
+ASSIGN FETmodelss_lib libMode shared
+DEFINE S_Parameter ../S_Parameter
+ASSIGN S_Parameter libMode shared

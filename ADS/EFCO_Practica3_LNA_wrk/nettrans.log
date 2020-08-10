@@ -1,0 +1,27 @@
+Netlist Translator (*) 390.shp Nov  9 2012
+IFF translation log
+
+Input format: PSpice
+Input filename: C:/Users/Monica/Docencia/AntiguoPlanEstudios/DAF/13_14/FETmodelss_wrk/atf34143.zap
+
+Output format: IFF file
+Output filename: spice.iff
+
+Special options:
+    Processing first line as comment.
+
+Begin translation at Mon Oct 14 16:40:27 2013
+
+Creating schematic with named connections.
+Reading item definition file "C:\Agilent\ADS2012_08/config\spctoiff.cfg"
+
+Translation completed at Mon Oct 14 16:40:27 2013.
+
+========================================================================
+End of Spice Translation Log file, beginning of IFF Translation Log File
+========================================================================
+
+Beginning IFF import
+Processing IFF file: C:\Users\Monica\Docencia\AntiguoPlanEstudios\DAF\13_14\FETmodelss_wrk\spice.iff
+Cannot overwrite a design which exists in memory: UNNAMED
+IFF import complete

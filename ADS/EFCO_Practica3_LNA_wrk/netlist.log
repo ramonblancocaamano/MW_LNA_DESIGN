@@ -1,0 +1,29 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="FETmodelss_lib:LNA_design+final:schematic"
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=yes SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Center=7.5 GHz Span=3.75 GHz Lin=76 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:Term2  N__13 0 Num=2 Z=50 ohm Noise=yes 
+Port:Term1  N__2 0 Num=1 Z=50 Ohm Noise=yes 
+aele StabFact1=stab_fact(S);
+TLIN:TL4  N__13 0 Z=50.0 Ohm E=64.974 F=7.5 GHz 
+TLIN:TL5  N__8 N__13 Z=50.0 Ohm E=157.97 F=7.5 GHz 
+aele MaxGain1=max_gain(S);
+aele S_StabCircle1=s_stab_circle(S,51);
+aele L_StabCircle1=l_stab_circle(S,51);
+R:R1  N__10 N__8 R=5.5 Ohm Noise=yes 
+TLIN:TL3  N__2 0 Z=50.0 Ohm E=52.903 F=7.5 GHz 
+TLIN:TL2  N__2 N__14 Z=50.0 Ohm E=140.279 F=7.5 GHz 
+#uselib "ckt" , "S2P"
+S2P:SNP2  N__14 N__10 0 Lib="sp_hp" File="sp_hp_ATF-13036_19921201" Temp=27.0 

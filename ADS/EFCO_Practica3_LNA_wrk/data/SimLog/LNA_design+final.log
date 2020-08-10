@@ -1,0 +1,17 @@
+Warning detected by hpeesofsim during netlist parsing.
+    Unrecognizable scale factor `ohm' ignored
+
+SP SP1[1] <FETmodelss_lib:LNA_design+final:schematic>   freq=(5.625 GHz->9.375 GHz)
+.Warning detected by hpeesofsim during SP analysis `SP1'.
+    The simulation temperature (25.0 C) is not the same as the IEEE standard
+    noise temperature (290 K or 16.85 C) in the noise analysis `SP1'.
+    If the simulation temperature is not equal to the IEEE standard temperature,
+    then the loss and the noise figure will not agree for a passive circuit.
+    The `Temp' parameter on the Options item can be set to 16.85 C to
+    eliminate this warning message.
+
+...........................................................................
+
+Resource usage:
+  Total stopwatch time     =     1.84 seconds.
+

@@ -1,0 +1,12 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/examples/DesignKit/DemoKit_Non_Linear/DemoKit_Non_Linear_v2.0/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/Analog_Parts_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/HFDiode_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/Meas_SMT_Passive_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/Microwave_Transistors_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/RF_Passive_SMT_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/RF_Transistors_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/S_Parameter_vendor_kit/lib.defs
+INCLUDE C:/Users/Monica/ADS_usr/System_Lib_vendor_kit/lib.defs
+DEFINE EFCO_Practicas2_DisenoAmps_lib EFCO_Practicas2_DisenoAmps_lib
+ASSIGN EFCO_Practicas2_DisenoAmps_lib libMode shared

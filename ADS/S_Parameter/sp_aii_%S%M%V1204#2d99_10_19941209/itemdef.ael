@@ -1,0 +1,13 @@
+create_text_form("string","String",0,"\"%v\"","\"%v\"");
+create_form_set("string","string");
+
+create_text_form("StdForm","Standard",0,"%v","%v",NULL,NULL,NULL,NULL);
+create_text_form("FileBasedForm","File Based",0,"%v","%v",NULL,NULL,NULL,NULL);
+create_form_set("StdFileFormSet","StdForm","FileBasedForm");
+
+create_item("sp_aii_SMV1204-99_10_19941209","Alpha Industries SMV1204-99 Varactor (series): Vd=8","SNP",0,-1,NULL,"Component Parameters","Linear Model","#uselib \"ckt\" , \"%d\"\n%d:%t %# %44?0%:%31?%C%:_net%c%;%;%e 0  %r%b%8?%29?%:%30?%p %:%k%?[%1i]%;=%p %;%;%;%e%e","S2P","%t%b%r%38?%:\n%30?%s%:%k%?[%1i]%;=%s%;%;%e%e%;","LIBSYM_DIODE_SP",0,NULL,32,
+create_parm("Lib","S-Parameter Library",513,"string",-2,"sp_aii"),
+create_parm("File","S-Parameter data file",513,"string",-2,"sp_aii_SMV1204-99_10_19941209"),
+create_parm("Bias","S-Parameter data file",65,"string",-2,"Varactor (series): Vd=8"),
+create_parm("Frequency","S-Parameter Frequency Range",65,"string",-2,"{0.20 - 3.00} GHz"),
+create_parm("Temp","Temperature",513,"StdFileFormSet",12,prm("StdForm","27.0")));

@@ -1,0 +1,8 @@
+FRAMEWORKÿ2ÿ
+ICONÿ/ÿfileÿNetlistsÿ/Netlists:fileÿ0ÿ0ÿ
+ICONÿ/Netlists:fileÿdesignÿUNNAMEDÿ/Netlists:file/UNNAMED:designÿ0ÿ0ÿ
+SCIONPAGEÿ/Netlists:file/UNNAMED:designÿADS_ITEM_SCHEM_NAME=SYM_0Portÿ
+SCIONOBJÿMÿUNNAMEDÿ_M=1ÿ_M_ADS_UNIT=-1ÿ_M_ADS_LABEL=Subcircuit parallel factorÿ_M_ADS_ATTR=1073807360ÿ_M_ADS_FORMSET=StdFormSetÿ_M_ADS_INDEX=1ÿ_M_ADS_FORM_NAME=StdFormÿIFF_PROPERTY_MAPPING_ADS=ÿ
+ENDPAGEÿ
+CIRCUITPAGEÿ/Netlists:file/UNNAMED:designÿ125ÿ25ÿ12.5ÿONÿIN/100ÿ
+ENDPAGEÿ

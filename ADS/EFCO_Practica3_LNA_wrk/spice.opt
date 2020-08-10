@@ -1,0 +1,8 @@
+ConnectionMethod = 1
+SpiceDialect = 3
+ElementReplacementTable
+IgnoreFirstLine = true
+SuppressNameMapping = false
+ComponentName = spice1
+NumberOfPins = 0
+DirectoryToStoreNetList = C:\Users\Monica\Docencia\AntiguoPlanEstudios\DAF\13_14\FETmodelss_wrk
